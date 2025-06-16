@@ -17,15 +17,8 @@ class HomePage{
         return new ProductListingPage();
     }
 
-    async clickOnSignInBtn(){
-
-        let updatedUrl;
-        await this.signInBtn.then((ele)=>{
-            updatedUrl = ele.prop("href");
-        });
-        await cy.visit(updatedUrl);
-        await cy.origin(updatedUrl);
-
+    clickOnSignInBtn(){
+        this.signInBtn.eq(0).click();
         return new SignInPage();
     }
     
