@@ -20,4 +20,7 @@ When("user click on sign in button",function(){
 
 Then("verify user logged in",function(){
 
+    // After login, redirected to www.ebay.com — resume test on default origin
+    cy.url().should("include", "ebay.com"); 
+
 })
